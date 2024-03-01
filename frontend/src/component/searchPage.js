@@ -18,7 +18,7 @@ const SearchPage = () => {
      
     };
 
-    const handleclic= async (movie)=>{
+    const handleclick= async (movie)=>{
           try {
             const requestSent= await axios.post("/api/movies/add",movie);
 
