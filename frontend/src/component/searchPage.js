@@ -11,7 +11,7 @@ const SearchPage = () => {
     const handleSearch = async () => {
         try {
             const response = await axios.get(`http://www.omdbapi.com/?apikey=2778ba1e&s=${query}`);
-             setResults (response.data.Search);
+             setResults (response.data.results);
         } catch (error) {
             console.log(error);
         }
