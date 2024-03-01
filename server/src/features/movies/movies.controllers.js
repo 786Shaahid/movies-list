@@ -6,8 +6,8 @@ export class MoviesController{
    } 
    async addFavorite(req, res) {
     try {
-        const query = req.query.query;
-        const results = await this.moviesRepository.add(query);
+        const reqData = req.body.movie;
+        const results = await this.moviesRepository.add(reqData);
         if( !results){
           return res.status(404).json({
             data:"",
